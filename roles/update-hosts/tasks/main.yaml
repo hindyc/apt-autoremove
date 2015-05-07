@@ -1,0 +1,3 @@
+---
+ - name: Do a safe upgrade of each host
+   apt: update-cache=yes upgrade=safe
