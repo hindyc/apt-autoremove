@@ -1,3 +1,6 @@
 ---
+ - name: Update apt cache
+   apt: update-cache=yes
+
  - name: Do a safe upgrade of each host
-   apt: update-cache=yes upgrade=safe
+   apt: upgrade=safe
