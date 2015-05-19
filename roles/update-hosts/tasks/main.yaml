@@ -4,3 +4,8 @@
 
  - name: Do a safe upgrade of each host
    apt: upgrade=safe
+   register: didupgrade
+
+ - name: Send an email if upgraded
+   mail: subject='Completed upgrade on {{ ansible_hostname }}' 
+         body='Pending apt upgrades have been applied to {{ ansible_hostname }}.'
