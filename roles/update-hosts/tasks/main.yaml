@@ -7,7 +7,5 @@
    register: didupgrade
 
  - name: Send an email if upgraded
-   mail: subject="Completed upgrade on {{ ansible_hostname }} "
-         body="Pending apt upgrades have been applied to {{ ansible_hostname }}."
-         to="chindy@lwpca.net"
-   when: didupgrade.changed
+   mail: subject="Apt safe upgrade completed on this_host" body="Completed an upgrade." to="chindy@lwpca.net"
+   #when: didupgrade.changed
