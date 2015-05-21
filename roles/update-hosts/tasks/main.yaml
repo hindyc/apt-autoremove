@@ -7,5 +7,5 @@
  #  register: didupgrade
 
  - name: Send an email if upgraded
-   mail: subject="Apt safe upgrade completed on this_host" body="Completed an upgrade." to="<chindy@lwpca.net>" host='127.0.0.1'
+   local_action: mail subject="Apt safe upgrade completed on this_host" body="Completed an upgrade." to="<chindy@lwpca.net>" host='127.0.0.1'
    #when: didupgrade.changed
