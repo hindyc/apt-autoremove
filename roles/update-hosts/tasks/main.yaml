@@ -1,10 +1,10 @@
 ---
- - name: Update apt cache
-   apt: update-cache=yes
+ #- name: Update apt cache
+ #  apt: update-cache=yes
 
- - name: Do a safe upgrade of each host
-   apt: upgrade=safe
-   register: didupgrade
+ #- name: Do a safe upgrade of each host
+ #  apt: upgrade=safe
+ #  register: didupgrade
 
  - name: Send an email if upgraded
    mail: subject="Apt safe upgrade completed on this_host" body="Completed an upgrade." to="<chindy@lwpca.net>" host='127.0.0.1'
