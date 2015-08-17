@@ -7,3 +7,5 @@
 
  - name: do purge
    script: dpkg-rc.sh
+   register: purge_output
+   changed_when: purge_output.rc == 16
