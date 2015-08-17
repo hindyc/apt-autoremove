@@ -1,0 +1,6 @@
+---
+ - name: do autoremove
+   shell: 'apt-get -y autoremove'
+
+ - name: do purge
+   shell: 'apt-get -y purge'

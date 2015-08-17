@@ -1,0 +1,9 @@
+---
+- name: Run apt autoremove
+  hosts: all
+  user: installer
+  sudo: yes
+  roles:
+   - autoremove
+  tags:
+   - do_autoremove
