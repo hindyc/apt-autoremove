@@ -1,0 +1,9 @@
+---
+- name: upgrade apt packages
+  hosts: all
+  user: installer
+  sudo: yes
+  roles:
+   - update-hosts
+  tags:
+   - doupdate 

@@ -1,0 +1,12 @@
+---
+ - name: Update apt cache
+   apt: update-cache=yes
+
+ - name: Do a safe upgrade of each host
+   apt: upgrade=safe
+   register: didupgrade
+
+ - name: Send an email if upgraded
+   local_action: mail subject="Apt safe upgrade completed on {{ ansible_hostname }}" body="Completed an upgrade." to="<chindy@lwpca.net>" from="ansible@euler.lwpca.net"
+   sudo: no
+   when: didupgrade.changed
